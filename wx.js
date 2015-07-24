@@ -1,3 +1,5 @@
+
+var myname=$(".display_name").text();
 function saveMessage() {
     pre=$("div.info:contains('百脑汇')>.ng-scope >.ng-binding").text();//获取右侧边栏的文字
     if(pre!=name){//如文字无变化，不执行
@@ -13,7 +15,7 @@ function saveMessage() {
              }
              text=texts[1];
          }else{
-             user='我';
+             user=myname;
              text=name;
          }
          $.ajax({
